@@ -1,0 +1,130 @@
+.header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+   height: 80px;
+   font-size: 18px;
+   line-height: 28px;
+   padding: 0px 20px;
+   margin-bottom: 25px;
+
+   background-color: white;
+}
+
+.linksWrapper {
+   display: flex;
+   gap: 20px;
+}
+
+.logOutLinks,
+.logInLinks {
+   display: flex;
+   align-items: center;
+   gap: 20px;
+}
+
+.profile {
+   display: flex;
+   align-items: center;
+   gap: 5px;
+
+   & > span {
+      transition: transform 0.3s ease;
+   }
+
+   & > span:hover {
+      text-decoration: underline;
+   }
+}
+
+.imageWrapper {
+   display: flex;
+   align-items: center;
+   border-radius: 50%;
+   position: relative;
+
+   & > img {
+      width: 46px;
+      height: 46px;
+      padding: 2px;
+      border-radius: 50%;
+      position: relative;
+   }
+
+   &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+      background-image: conic-gradient(
+         rgb(57, 240, 57) 0deg 60deg,
+         transparent 60deg 120deg,
+         rgb(109, 109, 236) 120deg 240deg,
+         transparent 240deg 300deg,
+         rgb(57, 240, 57) 300deg 360deg
+      );
+   }
+
+   &:hover::before {
+      opacity: 1;
+      animation: rotate 2s ease 1;
+   }
+}
+
+// Отдельное оформление ссылок
+
+.logo {
+   transition: all 0.5s ease-out;
+
+   &:hover {
+      transform: scale(1.08);
+      background-color: rgba(240, 240, 240, 0.8);
+      padding: 5px;
+   }
+}
+
+.signUp {
+   color: #52c41a;
+   border: 1px solid #52c41a;
+   border-radius: 5px;
+   padding: 10px 18px;
+}
+
+.logOut {
+   background-color: transparent;
+   border: 1px solid black;
+   border-radius: 5px;
+   padding: 10px 18px;
+   &:hover {
+      background-color: #ff8484;
+      transition: background-color, 1.5s;
+   }
+}
+
+.createArticle {
+   font-size: 14px;
+   line-height: 22px;
+   border: 1px solid #52c41a;
+   color: #52c41a;
+   border-radius: 5px;
+   padding: 6px 10px;
+
+   &:hover {
+      background-color: #f1fcf4;
+      transition: background-color, 1.5s;
+   }
+}
+
+@keyframes rotate {
+   from {
+      transform: rotate(0deg);
+   }
+
+   to {
+      transform: rotate(360deg);
+   }
+}

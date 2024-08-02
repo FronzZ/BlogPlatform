@@ -1,0 +1,26 @@
+.articlesPage {
+   display: flex;
+   flex-direction: column;
+   max-width: 938px;
+   width: 100%;
+}
+
+.articles {
+   display: flex;
+   flex-direction: column;
+   gap: 26px;
+   margin-bottom: 26px;
+}
+
+.pagination {
+   display: flex;
+   justify-content: center;
+   margin-bottom: 17px;
+}
+
+.loader {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: calc(100vh - 105px);
+}
